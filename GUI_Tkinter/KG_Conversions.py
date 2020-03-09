@@ -21,7 +21,7 @@ e1.grid(row=0, column=1)
 
 b = Button(window, activebackground="lightgrey", text="Execute", command=conversion)        # here don't pass () in km_to_miles, it's not a usual function code
 b.grid(row=0, column=2)
-b.bell()                       # To ring a bell when the application starts
+b.bell()                       # To ring a bell(sound) when the application starts
 
 # Grams
 t1 = Text(window, height=1, width=25)
