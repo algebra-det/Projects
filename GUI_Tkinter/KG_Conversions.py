@@ -19,7 +19,7 @@ e1_value=StringVar()
 e1 = Entry(window, textvariable=e1_value)
 e1.grid(row=0, column=1)
 
-b = Button(window, activebackground="green", text="Execute", command=conversion)        # here don't pass () in km_to_miles, it's not a usual function code
+b = Button(window, activebackground="lightgrey", text="Execute", command=conversion)        # here don't pass () in km_to_miles, it's not a usual function code
 b.grid(row=0, column=2)
 b.bell()                       # To ring a bell when the application starts
 
