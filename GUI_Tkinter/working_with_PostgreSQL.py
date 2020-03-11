@@ -20,7 +20,7 @@ def create_table():
 def insert(item,quantity,price):
         conn = psycopg2.connect("dbname='database 1' user='postgres' password='postgres123' host='localhost' port='5432'")   # if you don't have a database file, than it will create this file
         cur = conn.cursor()
-        # Here we should declare that if there's not any database then create otherwise don't create
+        # Here we should declare that if there's not any database then create otherwise don't create any
         cur.execute("INSERT INTO store VALUES('%s','%s','%s')" %(item,quantity,price))      # its prone to SQL injections
         #OR
         #cur.execute("INSERT INTO store VALUES(%s,%s,%s)", (item,quantity,price))
