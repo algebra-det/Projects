@@ -118,5 +118,19 @@ b6.grid(row=7, column=3)
 Checkbutton(window, text="Preserve Aspects").grid(row=8, column=0)
 
 
-
 window.mainloop()
+
+
+""" If you want to convert this into an .exe file than use 'pyinstaller', installing it by using command 'pip install pyinstaller'
+    goto the working directory where your files are both fronend and backend and (any other file important for the app)
+    than use :
+    pyinstaller Book_keep_frontend.py
+    the above command will also make many other files in the directory for troubleshooting purpose
+    if you don't want to have such files than use 'pyinstaller -- onefile Book_keep_frontend.py'
+    although after the .exe file is created , and when when you double-click to open it
+    it will also open a CMD in the background , so in order to exclude that use "--windowed"
+    so the final syntax will be:
+
+        pyinstaller --onefile --windowed Book_keep_frontend.py
+
+"""
