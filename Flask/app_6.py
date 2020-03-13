@@ -1,3 +1,5 @@
+# USING JSONIFY(for online ) , JSON(for .json files)
+
 from flask import Flask, jsonify, request
 import json
 
