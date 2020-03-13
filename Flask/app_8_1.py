@@ -1,3 +1,8 @@
+# Using theform as POST & GET, i.e. having "GET" & "POST" methods in /theform page
+# Hence when the page is loaded it will first go to the "GET" request.method
+# And then after submitting it will go to "POST" request.method 
+# While being on the same page
+
 from flask import Flask, request
 
 
