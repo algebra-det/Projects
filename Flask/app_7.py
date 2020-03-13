@@ -1,3 +1,5 @@
+# Check the theform page, created using .html file
+
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
