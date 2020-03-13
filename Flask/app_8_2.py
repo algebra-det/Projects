@@ -1,3 +1,8 @@
+# Using the same /theform page but by routing method
+# By this we can still be on the /theform page for the "POST" method
+# By stating the app.route for the process as the /theform instead of /process
+# And editing the form action="/theform
+
 from flask import Flask, request
 
 app = Flask(__name__)
