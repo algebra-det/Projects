@@ -1,3 +1,5 @@
+# REQUEST FROM DATA, FORM & PROCESS
+
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
