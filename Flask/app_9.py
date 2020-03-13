@@ -1,6 +1,9 @@
 ''' To redirect the user to some PAGE
     Suppose the user have to log-in and then have to be redirected to the home PAGE
 '''
+# TAKE A LOOK AT THE URL AFTER CLICKING SUBMIT IN THE /theform
+# The query?name=""&location="" will be automatically filled from the user input form
+
 
 from flask import Flask, request, redirect, url_for
 
