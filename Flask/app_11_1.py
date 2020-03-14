@@ -9,7 +9,9 @@ from flask import Flask, jsonify, session
 app = Flask(__name__)
 
 app.config['DEBUG'] = True
-app.config['SECRET_KEY'] = "Thisisasecret"
+app.config['SECRET_KEY'] = "Thisisasecret"      # WITHOUT THIS SECRET KEY, NO ONE CAN CHANGE THE CONTENT OF THE COOKIES
+# Suppose if any malicios person get his hands on the cookie file, he can see the content of the cookies and change it's content
+# but with secret_key , he can't change the content, So never put any sensetive content inside the cookie
 
 @app.route("/")
 def index():
