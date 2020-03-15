@@ -1,0 +1,16 @@
+<h1>Hello {{ name }}, You are on the HOME PAGE</h1>
+
+<!--Do take note that we don't use " : " after the loops or conditions while programming LOGIC in html files-->
+{% if display%}
+<h2>This is being displayed</h2>
+{% else %}
+<h2>This is not being displayed</h2>
+{% endif%}
+
+{% for x in mylist %}
+<h3> {{ x }} </h3>
+{% endfor%}
+
+{% for y in listofdictionaries %}
+<h4> {{y.name }}</h4>
+{% endfor %}
