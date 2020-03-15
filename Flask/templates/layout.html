@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <h1>Base Template</h1>
+    <!--By default anything in between block and endblock will be neglected or overriden by the child,
+        in order to specify somthing in between we have to specify {} in the child block -->
+    {% block content %}
+    <h2> This is in the base template !</h2>
+    {% endblock %}
+  </body>
+</html>
