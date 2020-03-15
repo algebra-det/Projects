@@ -1,0 +1,10 @@
+<h1>Hello {{ name }}, You are on the HOME PAGE</h1>
+
+<!-- Inserting LOGIC in python-->
+{% if display%}                     <!-- As we set it True in app.py -->
+<h2>This is being displayed</h2>
+{% else %}
+<h3>This is not being displayed</h3>
+{% endif%}                          <!-- Ending of the statement-->
+
+<!-- Basically when we declare {}, We declare that here we will use some python code-->
