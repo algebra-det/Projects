@@ -1,0 +1,28 @@
+{% extends "layout.html"%}
+
+
+{% block title %} HOMEPAGE {% endblock%}
+
+
+{% block content%}
+{{ super() }}         <!-- To use the content specified in the parent block-->
+
+<h1>Hello {{ name }}, You are on the HOME PAGE</h1>
+
+{% if display%}
+<h2>This is being displayed</h2>
+{% else %}
+<h2>This is not being displayed</h2>
+{% endif%}
+
+{% for x in mylist %}
+<h3> {{ x }} </h3>
+{% endfor%}
+
+{% for y in listofdictionaries %}
+<h4> {{y.name }}</h4>
+{% endfor %}
+
+<img src="{{ url_for('static', filename='images/jk.jpg') }}" alt="J&K" width="500" height="600" style="float:center;">
+
+{% endblock %}
