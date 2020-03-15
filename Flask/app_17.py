@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/home/<string:name>', methods=['POST', 'GET'])
 def home(name):
     session['name'] = name
-    return render_template('home.html', name=name, display=False, mylist = ['one', 'two', 'three', 'four'], listofdictionaries=[{'name' : 'Akash'}, {'name' : "Mickey"}])
+    return render_template('home3.html', name=name, display=False, mylist = ['one', 'two', 'three', 'four'], listofdictionaries=[{'name' : 'Akash'}, {'name' : "Mickey"}])
 
 if __name__=="__main__":
     app.run(debug=True)
