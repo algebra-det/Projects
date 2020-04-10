@@ -1,0 +1,93 @@
+<%- include('../partials/header'); -%>
+
+<div class="row" style="margin-left: 20px;margin-right:50px;">
+    <form action="http://localhost:4000/event/add" method="post" class="col s12">
+        <input type="hidden" name="name" value="">
+        <div class="form-group row">
+            <label for="name" class="col-2 col-form-label" style="margin-top: 50px;">Name :</label>
+            <div style="margin-top: 50px;">
+                <input type="text" name="name" class="form-control" id="user_name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="bill" class="col-2 col-form-label">Bill :</label>
+            <div>
+                <input type="text" name="bill" value="" class="form-control" id="user_bill">
+            </div>
+        </div>
+
+        <div class="form-group row tohide">
+            <p id="check_button" style="margin-left: 50px;">Check</p>
+        </div>
+
+        <div class="form-group row tounhide" style="display: none;">
+            <label for="for_submitting" class="col-2 col-form-label" style="color: #ffffff; margin-left: 50px;">Click
+                Here To Submit</label>
+            <div>
+                <input type="submit" name="submit" value="Click To Submit" class="btn btn-primary btn-lg">
+            </div>
+        </div>
+
+    </form>
+    <div>
+        <p id="errorMessages"></p>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#check_button").click(function () {
+        var errormessage = "";
+        var fieldsmissing = "";
+
+        if ($("#user_name").val() == "") {
+            fieldsmissing += "Name";
+        }
+        if ($("#user_bill").val() == "") {
+            fieldsmissing += "<br>Bill";
+        }
+        if (fieldsmissing != "") {
+            errormessage += "<p>The following field(s) are missing:</p>" + fieldsmissing;
+        }
+        if ($.isNumeric($("#user_bill").val()) == false) {
+            errormessage += "<p>Your Bill number is not numeric</p>"
+        }
+        if (errormessage != "") {
+
+            $("#errorMessages").html(errormessage)
+
+        } else {
+
+            $(".tounhide").fadeIn();
+            $("#errorMessages").hide();
+            $("#check_button").fadeOut();
+
+        }
+
+    });
+</script>
+
+<%- include('../partials/footer'); -%>
+
+<!--
+
+    alert("Hello");
+var errormessage = "";
+var fieldmissing = "";
+
+if ($("#user_name").val() == "") {
+    fieldmissing += "<br>Name";
+}
+if ($("#user_bill").val() == "") {
+    fieldmissing += "<br>Bill";
+}
+if (fieldmissing!="") {
+    errormessage += "<p> The following field(s) are missing:</p>" + fieldmissing;
+}
+if ($.isNumeric($(".user_bill").val()) == false) {
+    errormessage += "<p> The Bill is not numeric</p>"
+}
+if (errormessage != "") {
+    $("errorMessages").html(errormessage)
+    
+}else {
+-->
