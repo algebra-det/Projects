@@ -12,4 +12,13 @@ def generating_random_number():
 
 
 
-print(generating_random_number())
+def grn():
+
+	arr = {str(x) for x in range(1,101)}
+
+	rn = int(arr.pop())
+
+	return rn
+
+
+print(grn())
